@@ -2,7 +2,7 @@
 
 为内网/离线 Linux x86_64 环境（Euler / CentOS 7+ / RHEL 7+）准备的 [Claude Code](https://docs.claude.com/en/docs/claude-code) 离线安装包。
 
-**最新版本**: `v2.1.139` · [下载](https://github.com/zcimon57-svj/claude-code-offline/releases/latest) · [详细安装步骤](INSTALL.md)
+**最新版本**: `v2.1.143` · [下载](https://github.com/zcimon57-svj/claude-code-offline/releases/latest) · [详细安装步骤](INSTALL.md)
 
 直接使用 bun 静态编译的独立二进制，**无需 Node.js / npm**，仅依赖 glibc ≥ 2.17。
 
@@ -10,11 +10,11 @@
 
 ```bash
 # 1. 在能访问 github 的机器下载离线包
-curl -fsSLO https://github.com/zcimon57-svj/claude-code-offline/releases/download/v2.1.139/claude-code-offline-2.1.139-linux-x64.tar.gz
+curl -fsSLO https://github.com/zcimon57-svj/claude-code-offline/releases/download/v2.1.143/claude-code-offline-2.1.143-linux-x64.tar.gz
 
 # 2. 拷到内网机后
-tar -xzf claude-code-offline-2.1.139-linux-x64.tar.gz
-cd claude-code-offline-2.1.139-linux-x64
+tar -xzf claude-code-offline-2.1.143-linux-x64.tar.gz
+cd claude-code-offline-2.1.143-linux-x64
 ./install.sh
 claude --version
 ```

@@ -9,7 +9,7 @@
 在**能访问 github.com 的机器**上：
 
 ```bash
-curl -fsSLO https://github.com/zcimon57-svj/claude-code-offline/releases/download/v2.1.139/claude-code-offline-2.1.139-linux-x64.tar.gz
+curl -fsSLO https://github.com/zcimon57-svj/claude-code-offline/releases/download/v2.1.143/claude-code-offline-2.1.143-linux-x64.tar.gz
 ```
 
 或浏览器打开 https://github.com/zcimon57-svj/claude-code-offline/releases/latest 手动下载。
@@ -17,16 +17,16 @@ curl -fsSLO https://github.com/zcimon57-svj/claude-code-offline/releases/downloa
 校验下载完整性（可选）：
 
 ```bash
-ls -lh claude-code-offline-2.1.139-linux-x64.tar.gz   # 大小约 68M
-tar -tzf claude-code-offline-2.1.139-linux-x64.tar.gz | head
-# 期望看到 claude-code-offline-2.1.139-linux-x64/{claude,install.sh,LICENSE.md,README.txt}
+ls -lh claude-code-offline-2.1.143-linux-x64.tar.gz   # 大小约 69M
+tar -tzf claude-code-offline-2.1.143-linux-x64.tar.gz | head
+# 期望看到 claude-code-offline-2.1.143-linux-x64/{claude,install.sh,LICENSE.md,README.txt}
 ```
 
 ---
 
 ## 步骤 2：拷贝到内网机
 
-把 `claude-code-offline-2.1.139-linux-x64.tar.gz` 这**一个文件**拷到内网机即可（scp / U盘 / 内部网盘 / 跳板机）。
+把 `claude-code-offline-2.1.143-linux-x64.tar.gz` 这**一个文件**拷到内网机即可（scp / U盘 / 内部网盘 / 跳板机）。
 
 到内网机后先做环境自检：
 
@@ -40,8 +40,8 @@ ldd --version | head -1   # 期望 glibc ≥ 2.17
 ## 步骤 3：在内网机安装
 
 ```bash
-tar -xzf claude-code-offline-2.1.139-linux-x64.tar.gz
-cd claude-code-offline-2.1.139-linux-x64
+tar -xzf claude-code-offline-2.1.143-linux-x64.tar.gz
+cd claude-code-offline-2.1.143-linux-x64
 ./install.sh
 ```
 
@@ -68,7 +68,7 @@ source ~/.bashrc
 
 ```bash
 which claude              # 应显示安装路径
-claude --version          # 期望: 2.1.139 (Claude Code)
+claude --version          # 期望: 2.1.143 (Claude Code)
 claude                    # 首次启动会跳 OAuth 登录
 ```
 
