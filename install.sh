@@ -11,7 +11,11 @@ BIN_SRC="$SCRIPT_DIR/claude"
 [[ -f "$BIN_SRC" ]] || { echo "ERROR: 找不到 $BIN_SRC（应与 install.sh 同目录）" >&2; exit 1; }
 
 [[ "$(uname -s)" == "Linux" ]] || { echo "ERROR: 仅支持 Linux" >&2; exit 1; }
-[[ "$(uname -m)" == "x86_64" ]] || { echo "ERROR: 仅支持 x86_64（当前 $(uname -m)）" >&2; exit 1; }
+if [[ "linux-x64" == "linux-x64" ]]; then
+  [[ "$(uname -m)" == "x86_64" ]] || { echo "ERROR: 仅支持 x86_64（当前 $(uname -m)）" >&2; exit 1; }
+else
+  [[ "$(uname -m)" == "aarch64" || "$(uname -m)" == "arm64" ]] || { echo "ERROR: 仅支持 arm64/aarch64（当前 $(uname -m)）" >&2; exit 1; }
+fi
 
 if command -v ldd >/dev/null; then
   GLIBC_VER=$(ldd --version 2>/dev/null | head -1 | grep -oE '[0-9]+\.[0-9]+' | head -1 || echo "")
