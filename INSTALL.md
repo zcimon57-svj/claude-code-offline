@@ -4,9 +4,9 @@
 
 | 平台 | 包名 | 安装脚本 |
 |---|---|---|
-| Linux x64 | `claude-code-offline-2.1.206-linux-x64.tar.gz` | `install.sh` |
-| Linux arm64 | `claude-code-offline-2.1.206-linux-arm64.tar.gz` | `install.sh` |
-| Windows x64 | `claude-code-offline-2.1.206-win32-x64.zip` | `install.ps1` |
+| Linux x64 | `claude-code-offline-2.1.211-linux-x64.tar.gz` | `install.sh` |
+| Linux arm64 | `claude-code-offline-2.1.211-linux-arm64.tar.gz` | `install.sh` |
+| Windows x64 | `claude-code-offline-2.1.211-win32-x64.zip` | `install.ps1` |
 
 Linux 需要 glibc ≥ 2.17。所有平台首次运行都需要能访问 Anthropic 服务完成认证。
 
@@ -17,26 +17,26 @@ Linux 需要 glibc ≥ 2.17。所有平台首次运行都需要能访问 Anthrop
 Linux x64:
 
 ```bash
-curl -fsSLO https://github.com/zcimon57-svj/claude-code-offline/releases/download/v2.1.206/claude-code-offline-2.1.206-linux-x64.tar.gz
+curl -fsSLO https://github.com/zcimon57-svj/claude-code-offline/releases/download/v2.1.211/claude-code-offline-2.1.211-linux-x64.tar.gz
 ```
 
 Linux arm64:
 
 ```bash
-curl -fsSLO https://github.com/zcimon57-svj/claude-code-offline/releases/download/v2.1.206/claude-code-offline-2.1.206-linux-arm64.tar.gz
+curl -fsSLO https://github.com/zcimon57-svj/claude-code-offline/releases/download/v2.1.211/claude-code-offline-2.1.211-linux-arm64.tar.gz
 ```
 
 Windows x64:
 
 ```powershell
-Invoke-WebRequest -Uri https://github.com/zcimon57-svj/claude-code-offline/releases/download/v2.1.206/claude-code-offline-2.1.206-win32-x64.zip -OutFile claude-code-offline-2.1.206-win32-x64.zip
+Invoke-WebRequest -Uri https://github.com/zcimon57-svj/claude-code-offline/releases/download/v2.1.211/claude-code-offline-2.1.211-win32-x64.zip -OutFile claude-code-offline-2.1.211-win32-x64.zip
 ```
 
 ## Linux 安装
 
 ```bash
-tar -xzf claude-code-offline-2.1.206-linux-x64.tar.gz
-cd claude-code-offline-2.1.206-linux-x64
+tar -xzf claude-code-offline-2.1.211-linux-x64.tar.gz
+cd claude-code-offline-2.1.211-linux-x64
 ./install.sh
 claude --version
 ```
@@ -54,8 +54,8 @@ claude --version
 ## Windows 安装
 
 ```powershell
-Expand-Archive claude-code-offline-2.1.206-win32-x64.zip
-cd claude-code-offline-2.1.206-win32-x64
+Expand-Archive claude-code-offline-2.1.211-win32-x64.zip
+cd claude-code-offline-2.1.211-win32-x64
 powershell -ExecutionPolicy Bypass -File .\install.ps1
 claude --version
 ```
