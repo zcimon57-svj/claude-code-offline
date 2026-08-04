@@ -2,7 +2,7 @@
 
 为内网/离线 Linux x86_64/aarch64 与 Windows x64 环境准备的 [Claude Code](https://docs.claude.com/en/docs/claude-code) 离线安装包。
 
-**最新版本**: `v2.1.220` · [下载](https://github.com/zcimon57-svj/claude-code-offline/releases/latest) · [详细安装步骤](INSTALL.md)
+**最新版本**: `v2.1.221` · [下载](https://github.com/zcimon57-svj/claude-code-offline/releases/latest) · [详细安装步骤](INSTALL.md)
 
 直接使用平台二进制，**无需 Node.js / npm**。Linux 依赖 glibc ≥ 2.17；Windows 使用 `claude.exe`。
 
@@ -11,9 +11,9 @@
 ### Linux x64
 
 ```bash
-curl -fsSLO https://github.com/zcimon57-svj/claude-code-offline/releases/download/v2.1.220/claude-code-offline-2.1.220-linux-x64.tar.gz
-tar -xzf claude-code-offline-2.1.220-linux-x64.tar.gz
-cd claude-code-offline-2.1.220-linux-x64
+curl -fsSLO https://github.com/zcimon57-svj/claude-code-offline/releases/download/v2.1.221/claude-code-offline-2.1.221-linux-x64.tar.gz
+tar -xzf claude-code-offline-2.1.221-linux-x64.tar.gz
+cd claude-code-offline-2.1.221-linux-x64
 ./install.sh
 claude --version
 ```
@@ -21,9 +21,9 @@ claude --version
 ### Linux arm64
 
 ```bash
-curl -fsSLO https://github.com/zcimon57-svj/claude-code-offline/releases/download/v2.1.220/claude-code-offline-2.1.220-linux-arm64.tar.gz
-tar -xzf claude-code-offline-2.1.220-linux-arm64.tar.gz
-cd claude-code-offline-2.1.220-linux-arm64
+curl -fsSLO https://github.com/zcimon57-svj/claude-code-offline/releases/download/v2.1.221/claude-code-offline-2.1.221-linux-arm64.tar.gz
+tar -xzf claude-code-offline-2.1.221-linux-arm64.tar.gz
+cd claude-code-offline-2.1.221-linux-arm64
 ./install.sh
 claude --version
 ```
@@ -31,9 +31,9 @@ claude --version
 ### Windows x64
 
 ```powershell
-Invoke-WebRequest -Uri https://github.com/zcimon57-svj/claude-code-offline/releases/download/v2.1.220/claude-code-offline-2.1.220-win32-x64.zip -OutFile claude-code-offline-2.1.220-win32-x64.zip
-Expand-Archive claude-code-offline-2.1.220-win32-x64.zip
-cd claude-code-offline-2.1.220-win32-x64
+Invoke-WebRequest -Uri https://github.com/zcimon57-svj/claude-code-offline/releases/download/v2.1.221/claude-code-offline-2.1.221-win32-x64.zip -OutFile claude-code-offline-2.1.221-win32-x64.zip
+Expand-Archive claude-code-offline-2.1.221-win32-x64.zip
+cd claude-code-offline-2.1.221-win32-x64
 powershell -ExecutionPolicy Bypass -File .\install.ps1
 claude --version
 ```
@@ -58,7 +58,7 @@ GH_REPO=zcimon57-svj/claude-code-offline GH_TOKEN=ghp_xxx ./pack-claude-code.sh 
 PLATFORM=win32-x64 GH_REPO=zcimon57-svj/claude-code-offline GH_TOKEN=ghp_xxx ./pack-claude-code.sh ./out --push
 
 # 锁定版本
-VERSION=2.1.220 PLATFORM=win32-x64 GH_REPO=zcimon57-svj/claude-code-offline GH_TOKEN=ghp_xxx ./pack-claude-code.sh ./out --push
+VERSION=2.1.221 PLATFORM=win32-x64 GH_REPO=zcimon57-svj/claude-code-offline GH_TOKEN=ghp_xxx ./pack-claude-code.sh ./out --push
 
 # Linux arm64
 PLATFORM=linux-arm64 GH_REPO=zcimon57-svj/claude-code-offline GH_TOKEN=ghp_xxx ./pack-claude-code.sh ./out --push
